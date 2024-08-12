@@ -1,0 +1,14 @@
+{
+  "CT010": {
+    "body": {
+      "code": "Cupom"
+    },
+    "expectedResponse": {
+      "code": "woocommerce_rest_coupon_code_already_exists",
+      "message": "O código de cupom já existe",
+      "data": {
+        "status": 400
+      }
+    }
+  }
+}
