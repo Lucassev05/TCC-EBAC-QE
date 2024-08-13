@@ -6,10 +6,10 @@
   "main": "index.js",
   "scripts": {
     "ui-test": "npx playwright test",
-    "api-test": "mocha ./api/tests/**/*.test.js --reporter spec",
+    "api-test": "mocha ./api/tests/**/*.test.js && npm run allure",
     "mobile-test": "wdio run ./mobile/config/wdio.conf.js",
     "allure": "npx allure generate allure-results --clean -o allure-report && npx allure open allure-report",
-    "api-test:allure": "mocha ./api/tests/**/*.test.js && npm run allure",
+    "api-test:spec": "mocha ./api/tests/**/*.test.js --reporter spec",
     "report": "allure generate allure-results",
     "posttest": "npm run report"
   },
