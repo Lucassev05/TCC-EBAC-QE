@@ -1,7 +1,7 @@
 name: Run Ui Tests - Playwright
 on:
-  push:
-    branches: [ci]
+  pull_request:
+    branches: [main]
   workflow_dispatch:
 jobs:
   test:
