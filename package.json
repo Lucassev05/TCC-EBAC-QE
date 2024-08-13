@@ -9,7 +9,9 @@
     "api-test": "mocha ./api/tests/**/*.test.js --reporter spec",
     "mobile-test": "wdio run ./mobile/config/wdio.conf.js",
     "allure": "npx allure generate allure-results --clean -o allure-report && npx allure open allure-report",
-    "api-test:allure": "mocha ./api/tests/**/*.test.js && npm run allure"
+    "api-test:allure": "mocha ./api/tests/**/*.test.js && npm run allure",
+    "report": "allure generate allure-results",
+    "posttest": "npm run report"
   },
   "mocha": {
     "parallel": false,
