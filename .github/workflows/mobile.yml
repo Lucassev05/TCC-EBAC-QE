@@ -1,13 +1,10 @@
-name: TCC Mobile
+name: Run Mobile Tests - Appium + Sourcelabs
 
 on:
-  push:
-    branches: [ci]
-
-  # Allows you to run this workflow manually from the Actions tab
+  pull_request:
+    branches: [main]
   workflow_dispatch:
 
-# A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "build"
   test:
@@ -31,7 +28,7 @@ jobs:
       - name: Install Dependencies
         run: npm i
       - name: Run Tests
-        run: npm t
+        run: npm run mobile-test
       - name: Publish Report
         uses: peaceiris/actions-gh-pages@v3
         if: always()

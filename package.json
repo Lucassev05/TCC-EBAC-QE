@@ -6,7 +6,7 @@
   "main": "index.js",
   "scripts": {
     "ui-test": "npx playwright test",
-    "api-test": "mocha ./api/tests/**/*.test.js && npm run allure",
+    "api-test": "mocha ./api/tests/**/*.test.js",
     "mobile-test": "wdio run ./mobile/config/wdio.conf.js",
     "allure": "npx allure generate allure-results --clean -o allure-report && npx allure open allure-report",
     "api-test:spec": "mocha ./api/tests/**/*.test.js --reporter spec",
