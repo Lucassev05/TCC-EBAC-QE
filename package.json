@@ -10,6 +10,9 @@
     "mobile-test": "wdio run ./mobile/config/wdio.conf.js",
     "allure": "npx allure generate allure-results --clean -o allure-report && npx allure open allure-report",
     "api-test:spec": "mocha ./api/tests/**/*.test.js --reporter spec",
+    "performance-test": "k6 run --config performance/config.json  ./performance/simulations/coupons.test.js",
+    "performance-test:cloud": "k6 cloud run --config performance/config.json ./performance/simulations/coupons.test.js",
+    "performance-test:localtocloud": "k6 run --config performance/config.json --out ./performance/simulations/coupons.test.js",
     "report": "allure generate allure-results",
     "posttest": "npm run report"
   },
